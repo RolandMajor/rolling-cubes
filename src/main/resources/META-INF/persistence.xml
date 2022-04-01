@@ -4,12 +4,12 @@
     <persistence-unit name="jpa-persistence-unit-1" transaction-type="RESOURCE_LOCAL">
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
         <properties>
-            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://remotemysql.com:3306/3aItz1caI1" />
-            <property name="javax.persistence.jdbc.user" value="3aItz1caI1" />
-            <property name="javax.persistence.jdbc.password" value="PdMFPQS6cR" />
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://sql11.freemysqlhosting.net:3306/sql11482848" />
+            <property name="javax.persistence.jdbc.user" value="sql11482848" />
+            <property name="javax.persistence.jdbc.password" value="2XN5fR8yvT" />
             <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver" />
             <property name="hibernate.hbm2ddl.auto" value="update"/>
-            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect"/>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5Dialect"/>
         </properties>
     </persistence-unit>
 

@@ -53,7 +53,6 @@ public class GameController {
 
     private void drawGameState() {
         stepLabel.setText(String.valueOf(stepCount));
-
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
                 ImageView view = (ImageView) gameGrid.getChildren().get(i * 3 + j);
@@ -91,11 +90,7 @@ public class GameController {
         drawGameState();
     }
 
-
-
     public void cubeClick(MouseEvent mouseEvent) {
-
-
         int clickedColumn = GridPane.getColumnIndex((Node)mouseEvent.getSource());
         int clickedRow = GridPane.getRowIndex((Node)mouseEvent.getSource());
 
@@ -111,7 +106,6 @@ public class GameController {
                 gameResultDao.persist(getResult());
             }
         }
-
         drawGameState();
     }
 
@@ -125,7 +119,6 @@ public class GameController {
     }
 
     private GameResult getResult() {
-
         GameResult result = GameResult.builder()
                                     .player(userName)
                                     .solved(gameState.isSolved())
@@ -139,7 +132,6 @@ public class GameController {
         if (!gameState.isSolved()) {
             gameResultDao.persist(getResult());
         }
-
         Parent root = FXMLLoader.load(getClass().getResource("/fxml/topten.fxml"));
         Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
         stage.setScene(new Scene(root));
