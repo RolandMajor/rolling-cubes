@@ -100,7 +100,7 @@ public class GameController {
 
             if (gameState.isSolved()) {
                 log.info("Player {} solved the game in {} steps.", userName, stepCount);
-                solvedLabel.setText("You solved the puzzle!");
+                solvedLabel.setText("You win!");
                 doneButton.setText("Finish");
 
                 gameResultDao.persist(getResult());
